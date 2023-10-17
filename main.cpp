@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
 
     std::ofstream outFile(argv[2]); // Open the output file
     if (!outFile.is_open()) {
-        std::cerr << "Unable to open file";
+        std::cerr << "Unable to open file" << argv[2];
         return 1;   // Return with error
     }
 
