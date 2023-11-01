@@ -8,7 +8,7 @@
 int main(int argc, char* argv[]) {
     std::fstream inFile(argv[1]); // Open the input file
     if (!inFile.is_open()) {
-        std::cerr << "Unable to open file" << argv[1];
+        std::cerr << "Unable to open input file " << argv[1];
         return 1;   // Return with error
     }
     int N;
@@ -28,9 +28,9 @@ int main(int argc, char* argv[]) {
 
     int result = sum_large - sum_small;
 
-    std::ofstream outFile(argv[2]); // Open the output file
+    std::fstream outFile(argv[2]); // Open the output file
     if (!outFile.is_open()) {
-        std::cerr << "Unable to open file" << argv[2];
+        std::cerr << "Unable to open output file " << argv[2];
         return 1;   // Return with error
     }
 
